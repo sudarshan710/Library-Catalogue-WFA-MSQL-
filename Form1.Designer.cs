@@ -144,6 +144,7 @@
             Update.TabIndex = 2;
             Update.Text = "Update";
             Update.UseVisualStyleBackColor = true;
+            Update.Click += Update_Click;
             // 
             // Delete
             // 
@@ -154,6 +155,7 @@
             Delete.TabIndex = 2;
             Delete.Text = "Delete";
             Delete.UseVisualStyleBackColor = true;
+            Delete.Click += Delete_Click;
             // 
             // Reset
             // 
@@ -164,19 +166,24 @@
             Reset.TabIndex = 2;
             Reset.Text = "Reset";
             Reset.UseVisualStyleBackColor = true;
+            Reset.Click += Reset_Click;
             // 
             // bookList
             // 
             bookList.AllowUserToAddRows = false;
             bookList.AllowUserToDeleteRows = false;
+            bookList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             bookList.ColumnHeadersHeight = 29;
+            bookList.EditMode = DataGridViewEditMode.EditProgrammatically;
             bookList.Location = new Point(12, 198);
             bookList.Name = "bookList";
             bookList.RowHeadersWidth = 51;
             bookList.RowTemplate.Height = 29;
+            bookList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             bookList.ShowEditingIcon = false;
             bookList.Size = new Size(916, 330);
             bookList.TabIndex = 3;
+            bookList.CellClick += bookList_CellClick;
             // 
             // Form1
             // 
